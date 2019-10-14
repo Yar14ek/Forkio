@@ -1,0 +1,86 @@
+.opinion {
+  text-align: center;
+  padding-bottom: 10px;
+  background: url("../img/opinion/Layer_1.svg") no-repeat center/cover;
+  &__title {
+    padding: 50px 0;
+    color: $white-text;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__item-description {
+    font-family: $font-family;
+    color: $white-text;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 37px;
+  }
+  &__item {
+    @include width80;
+    margin-bottom: 35px;
+  }
+  &__items{
+    align-items: baseline;
+    padding-bottom: 40px;
+
+  }
+  &__line {
+    @include width80;
+    height: 2px;
+    background: #665769;
+  }
+  &__sub-text {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: #{($landscape-mobile-normal)}) {
+  .opinion {
+    &__line {
+      margin-top: 50px;
+    }
+    .opinion__title {
+      padding: 92px 0 100px;
+      font-size: 42px;
+    }
+  }
+}
+
+@media screen and (min-width: #{($landscape-mobile-big)}) {
+  .opinion__title {
+    padding: 80px 0 100px;
+  }
+  .opinion__item {
+    width: 40%;
+  }
+  .opinion__sub-text {
+    display: block;
+    font-family: $font-family;
+    color: rgba(162, 145, 165, 0.8);
+    @include width80;
+    font-size: 14px;
+    padding-bottom: 17px;
+  }
+  .opinion__line {
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (min-width: #{($landscape-tablet)}) {
+
+  .opinion__item {
+    width: 30%;
+  }
+  .opinion__title {
+    padding: 100px 0 100px;
+    font-size: 58px;
+  }
+  .opinion__sub-text {
+    width: 90%;
+  }
+  opinion__line {
+    width: 60%;
+  }
+}

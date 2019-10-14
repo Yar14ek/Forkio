@@ -1,0 +1,353 @@
+.carousel {
+  text-align: center;
+
+  &__user {
+    padding-top: 65px;
+    position: relative;
+
+  }
+
+
+
+  &__scroll-left {
+    position: absolute;
+    top: 193px;
+    left: 6%;
+    font-size: 14px;
+    color: $color-text-black;
+    cursor: pointer;
+
+
+  }
+
+  &__scroll-right {
+    position: absolute;
+    top: 193px;
+    right: 6%;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+
+
+
+  &__user-block {
+    display: none;
+    margin: 0 auto;
+
+    &--user-name {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--img {
+      height: 84px;
+      width: 84px;
+      border-radius: 50%;
+    }
+
+    &--name {
+      padding-top: 25px;
+      color: $color-text-black;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &--nick {
+      font-size: 16px;
+      color: $color-text-violet;
+      padding-top: 7px;
+    }
+
+    &--reviews {
+      padding-top: 23px;
+      font-family: $font-family;
+      font-size: 17px;
+      color: $color-text-black;
+      width: 71%;
+      margin: 0 auto;
+      max-height: 126px;
+      overflow: hidden;
+    }
+
+    &--reviews span {
+      color: $color-text-violet;
+    }
+
+    &--time {
+      color: $color-text-violet;
+      font-size: 16px;
+      padding-top: 16px;
+    }
+  }
+
+
+  &__user-block.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media screen and (min-width: #{($landscape-mobile-normal)}) {
+  .carousel {
+    &__scroll-left {
+      top: 180px;
+    }
+
+    &__scroll-right {
+      top: 180px;
+    }
+
+    &__user-block.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 15px;
+    }
+
+    &__line-user {
+      padding-left: 14%;
+      display: flex;
+      align-self: flex-start;
+    }
+
+    &__user-block {
+      margin: 0 auto;
+
+      &--user-name {
+        text-align: left;
+        margin-top: 20px;
+      }
+
+      &--name {
+        padding-top: 0;
+        padding-left: 20px;
+      }
+
+
+      &--nick {
+        padding-left: 20px;
+      }
+
+      &--reviews {
+        width: 80%;
+        align-self: flex-end;
+        margin: 0 auto;
+
+      }
+
+      &--time {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media (min-width: #{($landscape-mobile-big)}){
+  .carousel{
+    &__line-user {
+      padding-left: 21%;
+    }
+  }
+}
+@media (min-width:993px){
+  .carousel{
+    &__line-user {
+      padding-left: 33%;
+    }
+  }
+}
+
+.carousel__logo__item__github:hover .carousel__logo__icon--github {
+  color: #ffffff
+}
+
+.carousel__logo__item__github:hover .carousel__logo__text {
+  color: #ffffff
+}
+
+.carousel__logo__item__twitter:hover .carousel__logo__icon--twitter {
+  color: #26a6d1;
+}
+
+.carousel__logo__item__twitter:hover .carousel__logo__text {
+  color: #26a6d1;
+}
+
+.carousel__logo__item__facebook:hover .carousel__logo__text {
+  color: #3b5998;
+}
+
+.carousel__logo__item__facebook:hover .carousel__logo__icon--facebook {
+  color: #3b5998;
+}
+
+
+
+.carousel {
+  &__line {
+    display: none;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    margin-top: 57px;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    &__item {
+      border-radius: 5px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 280px;
+      height: 50px;
+
+
+      &__github {
+        background-color: #f3f3f3;
+        cursor: pointer;
+
+      }
+
+      &__github:hover {
+        background-color: #2b414d;
+        transition: 500ms all;
+      }
+
+      &__twitter {
+        background-color: #26a6d1;
+        border: 1px solid #26a6d1;
+        cursor: pointer;
+      }
+
+      &__twitter:hover {
+        background-color: #ffffff;
+        transition: 500ms all;
+      }
+
+      &__facebook {
+        background-color: #3b5998;
+        border: 1px solid #3b5998;
+        cursor: pointer;
+      }
+
+      &__facebook:hover {
+        background-color: #ffffff;
+        transition: 500ms all;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      left: 24px;
+      font-size: 20px;
+
+      &--github {
+        color: #2b414d
+      }
+
+
+      &--twitter {
+        color: #ffffff;
+      }
+
+      &--facebook {
+        color: #ffffff;
+      }
+
+    }
+  }
+
+  &__twitter {
+    &__icon {
+      font-size: 24px;
+      padding-left: 24px;
+
+      &--color {
+        color: #ffffff;
+      }
+
+    }
+  }
+
+  &__logo__text {
+    font-family: $font-family;
+    font-size: 26px;
+    font-weight: lighter;
+
+    &--twitter {
+      color: #ffffff;
+    }
+
+    &--facebook {
+      color: #ffffff;
+    }
+  }
+
+  &__users {
+    font-family: $font-family;
+    font-size: 19px;
+    color: rgba(132, 142, 151, 255);
+    padding-top: 18px;
+  }
+}
+
+@media (min-width: #{($landscape-mobile-big)}) {
+  .carousel {
+    &__line {
+      display: inline-block;
+      width: 100%;
+      border-bottom: 1px solid rgba(106, 126, 81, 0.16);
+    }
+
+    &__social {
+      margin-top: 60px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 520px;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__logo {
+      margin: 0;
+
+      &__item {
+        width: 232px;
+        //margin: 0;
+      }
+    }
+
+    &__logo:last-child {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: #{($landscape-tablet)}) {
+  .carousel {
+    &__social {
+      width: 800px;
+
+    }
+
+    &__logo {
+      margin-bottom: 75px;
+      padding-bottom: 0;
+    }
+
+    &__logo:last-child {
+      margin: 0;
+    }
+
+  }
+}

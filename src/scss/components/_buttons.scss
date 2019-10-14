@@ -1,0 +1,48 @@
+.btn {
+  color: $white-text;
+  background: $btn-bg;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 30px;
+  font-family: $font-family;
+  border: 1px solid $btn-bg;
+
+}
+
+.header__app-btn--mod {
+  padding: 15px 32px;
+}
+
+
+// form section start
+.subscribe {
+  &__btn:hover {
+    background-color: #fff;
+    color: #8d81ac;
+    transition: 500ms all;
+  }
+
+  &__btn--min768 {
+    display: none;
+  }
+
+}
+
+@media (min-width: #{($landscape-mobile-normal)}) {
+  .subscribe {
+    &__btn {
+      &--max768 {
+        display: none;
+      }
+
+      &--min768 {
+        display: inline-block;
+        padding: 10px 25px;
+      }
+    }
+  }
+}
+
+// form section end
+// >>>>>>> 617724692e454719ce58c8820c38b188d481f5ee

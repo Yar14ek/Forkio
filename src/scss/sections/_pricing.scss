@@ -1,0 +1,113 @@
+.pricing {
+  background: #4a384d;
+  text-align: center;
+  padding-bottom: 97px;
+
+  &__title {
+    padding: 50px 0;
+    color: $white-text;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__item_title {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 46px 0 34px;
+    color: $white-text;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  &__item_title-active {
+    background: #392a3a;
+  }
+  &__item_price {
+    color: $white-text;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 32px 0 24px;
+  }
+  &__item_line {
+    background: #8d81ac;
+    height: 5px;
+    width: 60px;
+    margin-bottom: 31px;
+
+  }
+  &__item_per-month {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #8e8290;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  &__item_description {
+    color: $white-text;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 37px;
+  }
+  &__item_description-mod {
+    margin-bottom: 68px;
+  }
+  &__item {
+    max-width: 257px;
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  &__item_bg-wrapper {
+    @include flex-colum;
+    align-items: center;
+    background: #5d4d60;
+  }
+  &__item_bg-wrapper-active {
+    background: #403042;
+  }
+  &__item_btn-mod {
+    margin-bottom: 47px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.15);
+    border: 0;
+    padding: 15px 37px;
+  }
+  &__item_btn-mod:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: #7f6d78;
+
+  }
+  &__item:nth-child(3) {
+    max-width: 300px;
+    height: 560px;
+  }
+  &__item_description-active {
+    margin-bottom: 92px;
+  }
+
+}
+
+@media screen and (min-width: #{($landscape-mobile-normal)}) {
+  .pricing {
+
+    &__title {
+      font-size: 42px;
+    }
+
+  }
+}
+
+@media screen and (min-width: #{($landscape-mobile-big)}) {
+  .pricing {
+    &__item {
+      margin: 0 auto 30px;
+    }
+  }
+}
+
+  @media screen and (min-width: #{($landscape-tablet)}) {
+    .pricing {
+      &__title {
+        font-size: 48px;
+      }
+    }
+  }

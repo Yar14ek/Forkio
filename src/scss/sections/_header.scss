@@ -1,0 +1,200 @@
+.header {
+  background: $header-bg;
+  &__logo-link {
+    @extend .flex-wrapper;
+  }
+
+  &__app {
+    background: url("../img/bg/header__app-bg.svg") no-repeat center/cover;
+    text-align: center;
+    @include flex-colum;
+    height: 90vh;
+  }
+  &__logo-link {
+    margin: 33px 0;
+  }
+  &__app-title {
+    margin: 43px 0 15px;
+    color: $white-text;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  &__app-slogan {
+    color: $btn-bg;
+    font-size: 18px;
+  }
+  &__app-text {
+    margin-top: 20px;
+    color: $grey-text;
+    font-size: 14px;
+  }
+  &__app-container--mod {
+    position: relative;
+    top: 60px;
+  }
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 105px;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+
+  &__list {
+    @include flex-colum;
+  }
+  &__item {
+
+    font-size: 25px;
+    padding: 40px 33px;
+    background: $menu-bg;
+
+  }
+  &__link {
+    position: relative;
+    color: $white-text;
+    transition: all 0.5s;
+  }
+  &__link:hover::before {
+    content: '';
+    width: 4px;
+    height: 53px;
+    position: absolute;
+    top: -12px;
+    left: -35px;
+    background: $btn-bg;
+  }
+  &__link:hover {
+    color: $btn-bg;
+  }
+}
+
+@media screen and (min-width: #{($landscape-mobile-normal)}) {
+  .header {
+    &__logo-title {
+      margin-left: 17px;
+      text-transform: uppercase;
+      font-family: $font-family;
+      color: $btn-bg;
+      font-size: 24px;
+      font-weight: 700;
+      transition: all 0.5s;
+    }
+    &__logo-link:hover .header__logo-title {
+      color: $white-text;
+    }
+    &__logo-link:hover .header__logo-link_img {
+      background: url(../img/icon/Logo_hover.svg) no-repeat center/cover;
+    }
+    &__app-title {
+      font-size: 54px;
+      margin: 100px 0 35px;
+    }
+    &__app-slogan {
+      font-size: 20px;
+    }
+    &__app-text {
+      font-size: 16px;
+    }
+    &__app-btn--mod {
+      font-size: 21px;
+    }
+
+  }
+  .btn {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: #{($landscape-mobile-big)} ){
+  .header {
+    &__burger-menu {
+      display: none;
+    }
+    &__logo-link {
+      margin: 22px 0 0;
+    }
+    &__app-title {
+      margin: 50px 0 26px;
+    }
+
+  }
+  .btn {
+    margin-top: 22px;
+  }
+  .header__app-btn--mod {
+    font-size: 21px;
+  }
+  .btn:hover {
+    background: $white-text;
+    color: $btn-bg;
+    transition: all 0.5s;
+  }
+  .menu {
+    display: block;
+    position: static;
+    width: 100%;
+    &__list {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    &__link:hover::before {
+      display: none;
+    }
+    &__link:hover {
+      color: $white-text;
+    }
+    &__item {
+      padding: 22px 15px;
+      background: $header-bg;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    &__link {
+      color: $btn-bg;
+    }
+
+  }
+}
+
+@media screen and (min-width: #{($landscape-tablet)}) {
+  .btn {
+    order: 3;
+    margin: 0;
+  }
+  .menu {
+    order: 2;
+    width: auto;
+    margin: 46px 0;
+    flex-grow: 6;
+
+    &__item {
+      padding: 22px 0;
+    }
+    &__item {
+      margin-right: 48px;
+    }
+    &__list {
+
+      justify-content: flex-end;
+    }
+  }
+  .header {
+    &__logo-link {
+      margin: 0;
+    }
+
+    &__app-title {
+      font-size: 82px;
+      margin: 60px 0 18px;
+    }
+    &__app-slogan {
+      font-size: 30px;
+    }
+  }
+
+}
+

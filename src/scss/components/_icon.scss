@@ -1,0 +1,80 @@
+.header {
+  &__logo-link_img {
+    background: url(../img/icon/Logo.svg) no-repeat center/cover;
+    width: 43px;
+    height: 41px;
+    transition: all 0.5s;
+  }
+
+  &__logo-link_img:hover {
+    background: url(../img/icon/Logo_hover.svg) no-repeat center/cover;
+  }
+
+  &__burger-menu {
+    background: url(../img/icon/sandwich.svg) no-repeat center/cover;
+    width: 26px;
+    height: 21px;
+  }
+
+  &__burger-menu--active {
+    background: url("../img/icon/cross.png") no-repeat center/cover;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+// tools section start
+.tools__editor-img {
+  background-image: url(../img/tools/editor.png);
+  background-repeat: no-repeat;
+  width: 317px;
+  height: 381px;
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (min-width: #{($landscape-mobile-normal)}) {
+  .tools {
+    &-img {
+      background-image: url(../img/tools/editor_480.png);
+      width: 460px;
+      height: 510px;
+    }
+  }
+}
+
+@media screen and (min-width: #{($landscape-mobile-big)}) {
+  .tools {
+    &__editor-img {
+      background-image: url(../img/tools/editor_768.png);
+      width: 700px;
+    }
+  }
+}
+
+// tools section end
+// footernsection start
+
+.footer {
+  &__logo--linck:hover .footer__logo--img {
+    background-image: url(../img/icon/Logo__hover-footer.png);
+    transition: 500ms;
+  }
+}
+
+@media (min-width: #{($landscape-mobile-normal)}) {
+  .footer {
+    &__logo--img {
+      background-image: url(../img/icon/Logo.svg);
+      background-repeat: no-repeat;
+      height: 41px;
+      width: 43px;
+      margin-top: 30px;
+      margin-left: 15px;
+    }
+  }
+}
+
+// footersection end
+// >>>>>>> 617724692e454719ce58c8820c38b188d481f5ee

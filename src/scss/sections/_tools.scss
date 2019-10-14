@@ -1,0 +1,179 @@
+
+.tools {
+  background-color: rgb(244, 244, 244);
+
+  &__flex-body {
+    position: relative;
+    width: 100%;
+  }
+
+  &__title {
+    padding-top: 20px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 700;
+    text-align: center;
+    font-size: 32px;
+    color: #8d81ac;
+  }
+
+  &__text--position {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  &__item {
+    text-align: center;
+    padding-top: 34px;
+  }
+
+
+  &__item-title {
+    font-family: $font-family;
+    color: #323232;
+    font-size: 16px;
+    padding-top: 22px;
+
+  }
+
+  &__item-text {
+    font-family: $font-family;
+    color: #848e97;
+    font-size: 14px;
+    line-height: 15px;
+    padding-top: 16px;
+  }
+
+  &__editor {
+    padding-bottom: 390px;
+    position: relative;
+    right: -10px;
+  }
+
+  
+}
+
+@media screen and (min-width: #{($landscape-mobile-normal)}) {
+  .tools {
+    &__text {
+      font-size: 46px;
+    }
+
+    &__item {
+      padding-top: 46px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-title {
+        padding: 0;
+      }
+
+      &-body {
+        text-align: left;
+      }
+
+      &-text {
+        padding-top: 21px;
+      }
+    }
+
+    &__img {
+      &-search {
+        height: 64px;
+        padding-left: 26px;
+        padding-right: 24px;
+      }
+
+      &-speed {
+        height: 80px;
+        padding-left: 27px;
+        padding-right: 44px;
+
+      }
+
+      &-experimental {
+        height: 84px;
+        padding-left: 42px;
+        padding-right: 59px;
+
+      }
+
+      &-watch {
+        height: 71px;
+        padding-left: 32px;
+        padding-right: 57px;
+
+      }
+
+    }
+
+    &__editor {
+      padding-bottom: 525px;
+
+         }
+  }
+}
+
+@media screen and (min-width: #{($landscape-mobile-big)}) {
+  .tools {
+    &__title {
+      padding-bottom: 20px;
+    }
+
+    &__text--position {
+      display: inline-block;
+    }
+
+    
+  }
+}
+
+@media screen and (min-width: #{($landscape-tablet)}) {
+  .tools {
+    &__title {
+      position: absolute;
+      right: 0;
+    }
+    &__flex-body{
+      padding-top: 40px;
+
+    }
+
+    &__text {
+      font-size: 44px;
+    }
+
+    &__list {
+      width: 40%;
+      padding-bottom: 60px;
+    }
+
+    &__item {
+      padding-top: 37px;
+    }
+
+    &__item-text {
+      padding-top: 17px;
+    }
+    &__editor{
+      position: absolute;
+      top: 116px;
+      right: -10;
+    }
+
+    &__editor-img {
+      background-position: 126px -20px;
+      height: 455px;
+    }
+  }
+}
+
+

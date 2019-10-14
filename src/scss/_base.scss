@@ -1,0 +1,19 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-wrapper--center {
+  justify-content: center;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}

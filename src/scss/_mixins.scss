@@ -1,0 +1,10 @@
+ @mixin flex-colum{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+ @mixin width80 {
+   width: 80%;
+   margin: 0 auto;
+ }
