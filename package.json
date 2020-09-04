@@ -33,7 +33,7 @@
     "gulp-uglify-es": "^1.0.4",
     "jshint": "^2.10.2",
     "jshint-stylish": "^2.2.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "rimraf": "^2.6.3"
   },
   "dependencies": {
